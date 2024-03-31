@@ -1,0 +1,118 @@
+body {
+    text-align: center;
+    background-color: rgb(48, 46, 46);
+}
+h1{
+    color:aliceblue;
+}
+
+.game {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    width: 325px;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    background-color: rgb(212, 218, 223);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.grid-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    column-gap: 5px;
+    row-gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.casilla {
+    border-radius: 15px;
+    border: 1px black solid;
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+}
+
+.casilla:hover {
+    opacity: 0.8;
+}
+
+.activo {
+    background-color: rgb(207, 69, 99)
+}
+
+.panel {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.subpanel {
+    display: flex;
+    flex-grow: 1;
+    font-weight: bolder;
+    font-style: italic;
+    color: rgb(96, 91, 91);
+}
+
+.columna {
+    flex-flow: column nowrap;
+}
+
+.fila {
+    flex-flow: row nowrap;
+
+}
+
+.fila>div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fila>div:nth-child(2)>p::after {
+    content: "";
+   /* visibility: hidden; */
+    width: 100%;
+    border-bottom: solid 1px;
+}
+
+.panel .btn-lo {
+    background-color: yellow;
+    height: 12px;
+    width: 40px;
+    border: none;
+    border-radius: 6px;
+}
+
+.panel .btn-lo:hover {
+    background-color: rgb(215, 215, 17);
+}
+
+.panel .btn-lo-big {
+    background-color: rgb(109, 15, 187);
+    height: 24px;
+    width: 80px;
+    border: none;
+    border-radius: 12px;
+}
+
+.panel .btn-lo-big:hover {
+    background-color: rgb(75, 5, 132)
+}
+
+.logo {
+    height: 50%;
+    width: 100%;
+    background-image: url(./assets/img/logo.jpg);
+    background-size: cover;
+    opacity: 0.6;
+}
