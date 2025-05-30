@@ -2,8 +2,9 @@ body {
     text-align: center;
     background-color: rgb(48, 46, 46);
 }
-h1{
-    color:aliceblue;
+
+h1 {
+    color: aliceblue;
 }
 
 .game {
@@ -80,7 +81,7 @@ h1{
 
 .fila>div:nth-child(2)>p::after {
     content: "";
-   /* visibility: hidden; */
+    /* visibility: hidden; */
     width: 100%;
     border-bottom: solid 1px;
 }
@@ -115,4 +116,57 @@ h1{
     background-image: url(./assets/img/logo.jpg);
     background-size: cover;
     opacity: 0.6;
+}
+
+/* Fondo del modal (overlay) */
+#instruccionesModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del contenido */
+#modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    max-height: 80%;
+    /* Limita la altura para permitir el scroll */
+    overflow-y: auto;
+    /* Activa el scroll cuando sea necesario */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Botón de cerrar */
+.close-btn {
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Ejemplo de texto largo para probar scroll */
+#modalContent p {
+    text-align: left;
+}
+
+#modalContent li {
+    text-align: start;
+    text-justify: initial;
+}
+
+#modalContent p {
+  text-align: justify;
+  text-align-last: left;
 }

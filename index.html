@@ -48,7 +48,7 @@
             <div class="subpanel columna">
                 <div class="logo"></div>
                 <div>
-                    <button class="btn-lo-big" id="btn-select" ></button>
+                    <button class="btn-lo-big" id="btn-select"></button>
                     <p>SELECT</p>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                 <div>
                     <button class="btn-lo" id="btn-onoff"></button>
                     <button class="btn-lo" id="btn-start"></button>
-                    <button class="btn-lo" id="btn-sound" ></button>
+                    <button class="btn-lo" id="btn-sound"></button>
                     <button class="btn-lo" id="btn-help"></button>
                 </div>
                 <div>
@@ -68,7 +68,300 @@
             </div>
         </div>
     </div>
+    <!-- Modal de instrucciones -->
+    <div id="instruccionesModal" style="display: none; position: fixed; top: 0; left: 0; 
+    width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; 
+    justify-content: center; align-items: center;">
+        <div style="background: white; padding: 20px; border-radius: 10px; max-width: 400px; text-align: center;"
+            id="modalContent">
+            <h2>Instrucciones</h2>
+            <p>Estas son las instrucciones de tu aplicación. Léelas con atención.</p>
+
+            <p>
+                LIGHTS OUT has 3 different GAME MODES of play.
+                The goal in all 3 MODES is the same, but each one
+                provides a different challenge, and beginning players
+                will probably want to start with MODE 1.</p>
+            <p>
+                MODE 1- 50 pre-programmed puzzles, each
+                progressively more difficult.
+            </p>
+            <p>
+                MODE 2- Over 1000 randomly selected puzzles.
+                Can you solve them all?</p>
+            <p>
+                MODE 3- Create your own puzzles, and try them
+                out on a friend!</p>
+            <p>
+                ON/OFF: Turns the game ON or OFF. Your LIGHTS
+                OUT game will shut off automatically after
+                3 minutes of non-play.</p>
+            <p>
+            <p>START : </p>
+            <ul>
+                <li>a) Starts each game.</li>
+                <li> b) Confirms a selected puzzle (MODE 1 and 2).</li>
+                <li> c) Confirms an input puzzle (MODE 3).</li>
+                <li> d) Restarts the puzzle (regardless of how
+                    many “moves” have been made).</li>
+            </ul>
+            <p>SELECT: </p>
+            <ul>
+                <li> a) Selects between MODES 1, 2, or 3.</li>
+                <li>b) Exits the current puzzle (and advances to next mode).</li>
+                <li> c) Selects a previously solved puzzle (MODES 1 and 2).</li>
+            </ul>
+
+            <p> SOUND : Toggles the sound ON and OFF.</p>
+
+
+            <p> HELP : Receive “hints” from the computer
+                (MODES 1 and 2). The HELP button will
+                give you the first two moves of a puzzle,
+                one move with each press. However,
+                once a player has pressed a button, this
+                feature is disabled until the puzzle is
+                solved or re-started.</p>
+            <p>
+
+            <h2> PLAYING THE GAME</h2>
+            <p>
+                PRESS THE "ON" BUTTON to turn on the unit. You
+                will now see a pattern of lights chasing around the
+                board. This is followed by the appearance of the
+                cross pattern.This pattern is a representation of
+                what would happen if you pressed the center button
+                while all of the lights were off on the game. As you
+                can see, the center button is lit, as are the 4
+                surrounding buttons.</p>
+            <p>
+                PRESS THE "START" BUTTON If this is your first
+                time playing LIGHTS OUT, three buttons in row
+                three will light.... This is Puzzle 1 (Mode 1).
+                To understand the solution to a puzzle, think of the
+                LIGHTS OUT puzzle
+                display in terms of
+                numbers. Each button
+                (or light) on the puzzle
+                can be assigned a
+                number from 1 to 25
+                (see adjacent illustration)
+                For Puzzle 1 (Mode 1), you should see button
+                numbers 11, 13, and 15 lit up on your display.
+                Since your goal is to shut off the lights in the fewest
+                moves possible, you will need to decide which buttons to
+                press. Remember, each button press effects the
+                surrounding buttons, so plan your moves carefully.
+            </p>
+            <p>
+                For example, if button 12 is pressed, the lights on
+                buttons 11 and 13 will be shut off, but now buttons 7,
+                12, and 17 will be turned on. Follow the illustrations
+                on the next page, and try it out on the actual game to
+                understand how to recognize certain patterns.
+            </p>
+            <p>
+
+                After a puzzle has been solved in MODE 1, you can
+                try to improve your solution by accessing that puzzle
+                again in MODE 1 by using the SELECT button. Simply
+                press SELECT at any time during a puzzle (this turns
+                all the lights out), then press the button number of
+                the puzzle you want to choose, followed by the
+                START button.
+            </p>
+            <p>
+                Note - You cannot select a puzzle number higher
+                than the last puzzle you were working on. For
+                example, if the last puzzle you complete is number
+                12 in MODE 1, you cannot select puzzle 14 until
+                you solve 13 first! </p>
+            <p>
+                Remember, if necessary, you can always shut off the
+                game and it will return you to the beginning of the
+                last puzzle you were working on when you’re ready
+                to play again! Your Lights Out game will shut-off
+                automatically after 3 minutes of non-play.</p>
+
+            <h2>THE HELP FEATURE</h2>
+            <p>
+                If you seem to be stuck on a puzzle, this is a good
+                way to get you back on the right track. The Help
+                feature can be used in MODES 1 and 2 on puzzles
+                requiring 10 moves or less (in MODE 1, these are
+                puzzles 1-25). When you start a puzzle, you can
+                either jump right in, or press the HELP button for
+                advice. The computer will show you the best
+                possible move to make, and then automatically
+                make that move for you. Press it again to see the
+                most logical second step. The computer will only
+                show you the first two moves, and then you’ll need
+                to proceed on you’re own. Remember, this help
+                feature can only be used at the beginning of a
+                puzzle, and can’t be used at all in the more
+                advanced (11 steps or higher) puzzles!</p>
+
+            <h2>THE SAVE FEATURE</h2>
+            <p>
+                As we mentioned, you can shut off the game and
+                return to the “current” puzzle at any point. There
+                are a few exceptions, however. This save feature will
+                not work in MODE 3 with the player-created puzzles,
+                and the game will be re-set when the batteries are
+                removed for replacement.</p>
+
+            <h2>SELECTING PUZZLE MODES</h2>
+            <p>
+                Now that you have solved Puzzle 1 in Mode 1, it is
+                time to learn how to access each of the three
+                different Puzzle Modes in Lights Out.</p>
+
+            <h4>MODE 1</h4>
+            <p>
+                After turning Lights Out on, pressing the start
+                button automatically defaults you to the last puzzle
+                you tried to solve in Mode 1.
+                Mode 1 enables you to solve 50 pre-programmed
+                puzzles, each one more difficult from the last.
+                Solving a beginning puzzle can be as few as 6 steps,
+                while the more advanced puzzles could require up to
+                15 steps! For the first 25 pre-programmed puzzles,
+                only one blinking light will appear. </p>
+            <table>
+                <tr>
+                    <th>PUZZLE</th>
+                    <th>MINIMUM STEPS</th>
+                    <th>ROW</th>
+                </tr>
+                <tr>
+                    <td> Puzzles 1-5 </td>
+                    <td>6</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Puzzles 6-10</td>
+                    <td>7</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Puzzles 11-15</td>
+                    <td>8</td>
+                    <td>3</td>
+
+                <tr>
+                    <td>Puzzles 16-20</td>
+                    <td>9</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td> Puzzles 21-25</td>
+                    <td>10</td>
+                    <td>6</td>
+                </tr>
+            </table>
+            <p>
+                Once you have mastered the first 25 puzzles in
+                Mode 1, only then can you proceed to puzzles 26-
+                50. These puzzles will be indicated by two lights, a
+                blinking light and a light in the lower right corner of
+                the game board that always stays lit.</p>
+
+            <table>
+                <tr>
+                    <th>PUZZLE</th>
+                    <th>MINIMUM STEPS</th>
+                    <th>ROW</th>
+                </tr>
+                <tr>
+                    <td> Puzzles 26-30 </td>
+                    <td>11</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Puzzles 31-35</td>
+                    <td>12</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Puzzles 36-40</td>
+                    <td>13</td>
+                    <td>3</td>
+
+                <tr>
+                    <td>Puzzles 41-45</td>
+                    <td>14</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td> Puzzles 46-50</td>
+                    <td>15</td>
+                    <td>5</td>
+                </tr>
+            </table>
+            <p>
+                Similar to the method for the first 25 puzzles, you
+                can tell how many moves are required for the more
+                advanced puzzles 26-50. </p>
+            <h2>REMEMBER</h2>
+            <p>
+                The challenge of Lights Out is to solve a puzzle in
+                the minimum number of moves required. When
+                you solve a puzzle in the minimum number of
+                moves, you will be rewarded with a blinking light
+                show chasing around the entire display. Lights Out
+                will then automatically display the next puzzle! If you
+                go over the minimum number of moves, the number
+                of moves you exceed by will flash on your display,
+                but you can still proceed to the next puzzle as long
+                as you do not exceed 10 moves! For example,
+                solving a 6 step puzzle in 8 steps will display two
+                blinking lights! If you solve a puzzle in more than 10
+                steps over the minimum number of moves, a lighted
+                “X” will appear on screen and you will have to try
+                again before advancing to the next puzzle!</p>
+            <h2>MODE 2</h2>
+            <p>
+                MODE 2 is similar to MODE 1, except that all the
+                puzzles are randomly generated by the computer.
+                You will be able to tell how many moves are required
+                to solve a puzzle right before the puzzle appears as
+                you did in MODE 1 (see previous charts).
+                NOTE: when you access MODE 2, the default
+                game, or first game in MODE 2, will be the same
+                puzzle level you achieved in MODE 1. So, if the
+                last puzzle you are working on in MODE 1 is an
+                eight step puzzle, you will start off with eight step
+                puzzles in MODE 2.
+                In Mode 2, you can go back to any puzzle level up to
+                the last puzzle level you achieved in Mode 1, by
+                simply pressing the select button at any time, then
+                pressing the button number of the puzzle you want
+                to choose, followed by the start button. </p>
+            <h2>MODE 3</h2>
+            <p>
+                You could call this “Lights In”, since you are now
+                given the chance to input your own puzzles to
+                challenge yourself and your friends! Of course, you
+                have to figure out how to solve them too, so don’t
+                try to get too tricky! When you select MODE 3 with
+                the SELECT button and push "Start", you are able to
+                press as many of the buttons on the keypad as you
+                like. Each time a button is pressed once, it will light
+                up. When you have finished creating, press start
+                again to begin your puzzle.
+                Note: it is possible to create a puzzle that is so
+                difficult, it may not have an answer! That is why
+                we have provided 1,000 puzzles for you to
+                program and try to solve. The following pages
+                will list these puzzles by the minimum number of
+                moves it takes to solve them, starting with 6 step
+                puzzles. Simply push the buttons listed for each
+                puzzle and then press the Start button to
+                challenge yourself and your friends!</p>
+            <button onclick="cerrarModal()">Cerrar</button>
+        </div>
     </div>
+
 </body>
 <script src="script.js"></script>
 

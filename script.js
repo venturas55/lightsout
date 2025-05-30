@@ -30,7 +30,99 @@ const pantallas = [
     [1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
     [0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0],
     [1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0],
-    [1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1]
+    [1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1],
+    [1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0],
+    [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+    ],
+    [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+    ],
+    [
+        1,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+    ],
+    [0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+    ]
 ];
 
 var config = {
@@ -53,6 +145,20 @@ botonSelect.addEventListener("click", selection);
 
 var botonSound = document.getElementById("btn-sound");
 botonSound.addEventListener("click", toggleSound);
+
+var btnHelp = document.getElementById("btn-help");
+btnHelp.addEventListener("click", showModal);
+
+function showModal() {
+    var modal = document.getElementById("instruccionesModal");
+    modal.style.display = "flex"; // Usamos 'flex' para centrar el contenido
+}
+
+function cerrarModal() {
+    var modal = document.getElementById("instruccionesModal");
+    modal.style.display = "none";
+}
+
 
 casillas.forEach(item => {
     item.addEventListener('click', pulse);
@@ -94,7 +200,7 @@ function pulse(event) {
 }
 
 function selection() {
-    console.log(">"+gameStatus);
+    console.log(">" + gameStatus);
     var casillas = document.querySelectorAll(".casilla");
     if (gameStatus == 0) {
         gameStatus = 1;
@@ -117,7 +223,7 @@ function selection() {
         playClick2();
     }
 
-   
+
 
 }
 
@@ -204,16 +310,16 @@ function pantallaInicio() {
     delay(3100).then(_ => {
         pantallaInicioCruz(); //
     });
-    gameStatus=0;
+    gameStatus = 0;
 }
 
 function onoff() {
-    if(gameStatus==-1){
+    if (gameStatus == -1) {
         playIntro();
         pantallaInicio();
-    }else{
+    } else {
         removeCasillasIluminadas();
-        gameStatus=-1;
+        gameStatus = -1;
     }
 
 }
