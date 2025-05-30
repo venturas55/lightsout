@@ -848,7 +848,7 @@ function onoff() {
 
 function toggleSound() {
     config.sound = !config.sound;
-    console.log("sound: " + config.sound);
+    guardarConfig(config);
 }
 
 async function playIntro() {
@@ -912,9 +912,9 @@ function cargarConfig() {
     return JSON.parse(config);
   } else {
     return {
-      sound: true,
-      num_pantalla: 0
+      "sound": true,
+      "num_pantalla": 0
     };
   }
 }
-cargarConfig();
+config= cargarConfig();
